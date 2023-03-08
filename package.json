@@ -1,8 +1,7 @@
 {
   "name": "bright-workshop-app",
   "version": "1.0.0",
-  "description": "website for bright workshop",
-  "main": "index.js",
+  "homepage": "https://github.com/AntonZenko/bright-workshop-app/",
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack --node-env=development",
@@ -19,7 +18,6 @@
   "bugs": {
     "url": "https://github.com/AntonZenko/bright-workshop-app/issues"
   },
-  "homepage": "https://github.com/AntonZenko/bright-workshop-app#readme",
   "devDependencies": {
     "@babel/core": "^7.21.0",
     "@babel/preset-env": "^7.20.2",

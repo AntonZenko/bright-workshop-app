@@ -1,1 +1,1 @@
-# bright-workshop-app-
+# bright-workshop-app

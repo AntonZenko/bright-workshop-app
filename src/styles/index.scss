@@ -1,11 +1,11 @@
 @import "../../node_modules/modern-normalize/modern-normalize.css";
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;600&display=swap");
-
 @import "./utils/vars";
+@import "./utils/reset";
+@import "./utils/hidden";
 
-body {
-  background-color: $background-color;
-  font-family: "Roboto Mono", monospace;
-  font-weight: 600;
-}
+@import "./components/container";
+
+@import "./layout/header.scss";
+
+@import "./components/mobMenu";

@@ -111,6 +111,7 @@
 .nav__link {
   display: flex;
   align-items: center;
+  pointer-events: none;
 }
 
 .menu__open {

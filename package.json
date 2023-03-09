@@ -6,7 +6,8 @@
     "dev": "webpack-dev-server",
     "build": "webpack --node-env=development",
     "prod": "webpack --node-env=production",
-    "clear": "rd /s /q dist"
+    "clear": "rd /s /q dist",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,12 @@
     "@babel/preset-env": "^7.20.2",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
+    "eslint": "^8.35.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-webpack-plugin": "^4.0.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "image-webpack-loader": "^8.1.0",

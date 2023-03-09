@@ -1,14 +1,15 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
 
-const mode = process.env.NODE_ENV || 'development';
+const mode = process.env.NODE_ENV || 'development'
 
-const devMode = mode === 'development';
+const devMode = mode === 'development'
 
-const target = devMode ? 'web' : 'browserslist';
+const target = devMode ? 'web' : 'browserslist'
 
-const devtool = devMode ? 'source-map' : undefined;
+const devtool = devMode ? 'source-map' : undefined
 
 module.exports = {
   mode,
@@ -17,21 +18,24 @@ module.exports = {
   devServer: {
     port: 3000,
     open: true,
-    hot: true,
+    hot: true
   },
   entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js',
-    assetModuleFilename: 'assets/[name][hash][ext]',
+    assetModuleFilename: 'assets/[name][hash][ext]'
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'index.html'),
+      template: path.resolve(__dirname, 'src', 'index.html')
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: '[name].[contenthash].css'
     }),
+    new ESLintPlugin({
+      fix: true
+    })
   ],
   module: {
     rules: [
@@ -44,12 +48,12 @@ module.exports = {
             options: {
               plugins: [
                 require('posthtml-include')({
-                  root: path.resolve(__dirname, 'src'),
-                }),
-              ],
-            },
-          },
-        ],
+                  root: path.resolve(__dirname, 'src')
+                })
+              ]
+            }
+          }
+        ]
       },
       {
         test: /\.(c|sa|sc)ss$/i,
@@ -60,17 +64,17 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [require('postcss-preset-env')],
-              },
-            },
+                plugins: [require('postcss-preset-env')]
+              }
+            }
           },
-          'sass-loader',
-        ],
+          'sass-loader'
+        ]
       },
       {
         test: /\.m?js$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: ['babel-loader']
       },
       {
         test: /\.(jpe?g|png|webp|gif|svg)$/i,
@@ -81,26 +85,26 @@ module.exports = {
                 loader: 'image-webpack-loader',
                 options: {
                   mozjpeg: {
-                    progressive: true,
+                    progressive: true
                   },
                   optipng: {
-                    enabled: false,
+                    enabled: false
                   },
                   pngquant: {
                     quality: [0.65, 0.9],
-                    speed: 4,
+                    speed: 4
                   },
                   gifsicle: {
-                    interlaced: false,
+                    interlaced: false
                   },
                   webp: {
-                    quality: 75,
-                  },
-                },
-              },
+                    quality: 75
+                  }
+                }
+              }
             ],
-        type: 'asset/resource',
-      },
-    ],
-  },
-};
+        type: 'asset/resource'
+      }
+    ]
+  }
+}

@@ -111,7 +111,6 @@
 .nav__link {
   display: flex;
   align-items: center;
-  // pointer-events: none;
 }
 
 .menu__open {
@@ -130,7 +129,6 @@
 }
 
 .active {
-  // background: linear-gradient(360deg, rgba(255, 209, 209, 0.4) 1%, rgba(255, 255, 255, 1) 40%);
   &::after {
     content: "";
     position: absolute;

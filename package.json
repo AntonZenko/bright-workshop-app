@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
-    "modern-normalize": "^1.1.0"
+    "modern-normalize": "^1.1.0",
+    "smooth-scroll": "^16.1.3"
   }
 }

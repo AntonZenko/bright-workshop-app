@@ -1,0 +1,155 @@
+.hero {
+  margin-top: 50px;
+  padding: 70px 0;
+  background-image: url("../images/bg35.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media screen and (min-width: 768px) {
+    padding: 110px 0;
+    margin: 83px auto 0;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    padding: 110px 0;
+    margin: 102px auto 0;
+  }
+}
+
+.hero__title {
+  font-family: "Raleway", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $title-text-color;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+.hero__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 180px;
+  height: 40px;
+
+  margin: 20px auto 0;
+
+  color: $white;
+  background-color: $purple;
+  border: hidden;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: background-color $transition;
+
+  &:hover {
+    background-color: $purple-hover;
+  }
+  @media screen and (min-width: 768px) {
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+@-webkit-keyframes bounceInLeft {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInLeft {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInLeft {
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+}
+
+.animated_hero {
+  -webkit-animation-duration: 600ms;
+  -webkit-animation-delay: 600ms;
+  animation-duration: 600ms;
+  animation-delay: 600ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}

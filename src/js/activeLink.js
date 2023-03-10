@@ -1,12 +1,12 @@
-const links = document.querySelector('.nav__list')
+const anchors = document.querySelectorAll('a[href*="#"]')
 
-const activeLinkToggle = e => {
-  const activeLink = document.querySelector('.active')
-  if (activeLink === e.target || e.target === e.currentTarget) {
-    return
-  }
-  activeLink.classList.remove('active')
-  e.target.classList.add('active')
+for (const anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    const blockID = anchor.getAttribute('href')
+    document.querySelector('' + blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
 }
-
-links.addEventListener('click', activeLinkToggle)

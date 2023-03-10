@@ -2,43 +2,47 @@
   <div class="container">
     <div class="header__top">
       <a class="header__logo" href="#">
-        <img src="images/logo.png" alt="logo" class="header__logo-img" />
-        <ul class="header__text-list">
-          <li class="header__logo-item rainbow">Bright Workshop</li>
+        <img src="images/logo_v2.png" alt="logo" class="header__logo-img" />
+        <ul class="header__text-list animated bounceInDown">
+          <li class="header__logo-item">Bright Workshop</li>
           <li class="header__logo-item">Wrap & detailing</li>
         </ul>
       </a>
       <ul class="header__contacts">
         <li class="header__contacts-item">
-          <a href="https://t.me/Bright_workshop" target="_blank">
-            <svg width="30" height="30">
+          <a
+            class="header__contacts-item-link"
+            href="https://t.me/Bright_workshop"
+            target="_blank"
+          >
+            <svg class="contacts__icon" width="30" height="30">
               <use href="./images/icon.svg#telegram"></use>
             </svg>
           </a>
         </li>
         <li class="header__contacts-item">
           <a href="viber://chat?number=+380960670875" target="_blank">
-            <svg width="30" height="30">
+            <svg class="contacts__icon" width="30" height="30">
               <use href="./images/icon.svg#viber"></use>
             </svg>
           </a>
         </li>
         <li class="header__contacts-item">
           <a href="https://wa.me/380960670875" target="_blank">
-            <svg width="30" height="30">
+            <svg class="contacts__icon" width="30" height="30">
               <use href="./images/icon.svg#whatsapp"></use>
             </svg>
           </a>
         </li>
         <li class="header__contacts-item">
           <a class="tel__link" href="tel:+380960670875">
-            <svg
+            <!-- <svg
               class="contacts__icon contacts__icon-tel"
               width="16"
               height="20"
             >
               <use href="images/icon.svg#smartphone"></use>
-            </svg>
+            </svg> -->
             <span class="contacts__text">+38 096 067 08 75</span>
           </a>
         </li>
@@ -59,7 +63,7 @@
   </div>
   <nav class="header__nav">
     <ul class="nav__list">
-      <li class="nav__item active">
+      <li class="nav__item">
         <a href="#wrap" class="nav__link">
           <svg width="40" height="32">
             <use href="./images/service_icons.svg#wrap"></use>
@@ -72,7 +76,7 @@
           <svg width="40" height="32">
             <use href="./images/service_icons.svg#det"></use>
           </svg>
-          <span class="header__nav-text">detailing</span>
+          <span class="header__nav-text">Детейлінг</span>
         </a>
       </li>
       <li class="nav__item">
@@ -80,7 +84,7 @@
           <svg width="40" height="32">
             <use href="./images/service_icons.svg#sew"></use>
           </svg>
-          <span class="header__nav-text">Sewing</span>
+          <span class="header__nav-text">Пошиття інтерьєру</span>
         </a>
       </li>
     </ul>
